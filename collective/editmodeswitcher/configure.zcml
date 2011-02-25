@@ -21,12 +21,4 @@
         permission="zope.Public"
     />
 
-    <!-- <genericsetup:registerProfile
-        name="default"
-        title="tamedia.policy"
-        directory="profiles/default"
-        description="Installs the tamedia.policy package"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    /> -->
-
 </configure>
