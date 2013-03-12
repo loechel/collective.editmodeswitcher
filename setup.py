@@ -8,7 +8,7 @@ version = '1.0.1dev'
 setup(name='collective.editmodeswitcher',
       version=version,
       description="Allows to toggle edit mode in Plone",
-      long_description=open("README.txt").read() + "\n" + \
+      long_description=open("README.rst").read() + "\n" + \
           open(os.path.join("docs", "HISTORY.txt")).read(),
 
       # Get more strings from
