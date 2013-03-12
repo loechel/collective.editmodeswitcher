@@ -6,8 +6,12 @@ version = '1.0.1dev'
 
 tests_require = [
     'unittest2',
-    'plone.app.testing',
     'pyquery',
+
+    'z3c.autoinclude',
+    'zope.configuration',
+
+    'plone.app.testing',
     ]
 
 
@@ -39,6 +43,10 @@ setup(name='collective.editmodeswitcher',
 
       install_requires=[
         'setuptools',
+
+        'Acquisition',
+        'Zope2',
+
         'Plone',
         ],
       tests_require=tests_require,
