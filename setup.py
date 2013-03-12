@@ -4,6 +4,12 @@ import os
 
 version = '1.0.1dev'
 
+tests_require = [
+    'unittest2',
+    'plone.app.testing',
+    'pyquery',
+    ]
+
 
 setup(name='collective.editmodeswitcher',
       version=version,
@@ -35,6 +41,8 @@ setup(name='collective.editmodeswitcher',
         'setuptools',
         'Plone',
         ],
+      tests_require=tests_require,
+      extras_require=dict(tests=tests_require),
 
       entry_points="""
       # -*- Entry points: -*-
