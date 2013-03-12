@@ -1,5 +1,5 @@
-Introduction
-============
+collective.editmodeswitcher
+===========================
 
 collective.editmodeswitcher allows to toggle between edit and view only mode.
 This enables users with modify permissions to view a page without editable
