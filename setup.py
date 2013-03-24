@@ -25,6 +25,7 @@ setup(name='collective.editmodeswitcher',
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Framework :: Plone',
+        'Framework :: Plone :: 4.2',
         'Framework :: Plone :: 4.3',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
@@ -33,7 +34,7 @@ setup(name='collective.editmodeswitcher',
       keywords='plone edit mode switch toggle',
       author='4teamwork GmbH',
       author_email='mailto:info@4teamwork.ch',
-      url='http://github.com/4teamwork/collective.editmodeswitcher',
+      url='https://github.com/4teamwork/collective.editmodeswitcher',
       license='GPL2',
 
       packages=find_packages(exclude=['ez_setup']),

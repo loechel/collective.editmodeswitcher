@@ -23,6 +23,12 @@ Add ``collective.editmodeswitcher`` to your buildout configuration:
 or add it as a dependency to one of your packages.
 
 
+Compatibility
+-------------
+
+Runs with `Plone <http://www.plone.org/>`_ `4.2` or `4.3`.
+
+
 Usage
 -----
 
