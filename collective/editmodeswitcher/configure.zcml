@@ -21,4 +21,33 @@
         permission="zope.Public"
     />
 
+    <browser:page
+        for="*"
+        name="isEditMode"
+        class=".browser.isEditMode"
+        permission="zope.Public"
+    />
+
+    <browser:page
+        for="*"
+        name="setEditMode"
+        class=".browser.setEditMode"
+        permission="zope.Public"
+    />
+
+    <browser:page
+        for="*"
+        name="setViewMode"
+        class=".browser.setViewMode"
+        permission="zope.Public"
+    />
+
+    <genericsetup:registerProfile
+      name="default"
+      title="collective.editmodeswitcher: switch between edit (with green bar) and view (without green bar) mode"
+      description='Installs the extension profile for the "collective.editmodeswitcher".'
+      directory="profiles/default"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
 </configure>

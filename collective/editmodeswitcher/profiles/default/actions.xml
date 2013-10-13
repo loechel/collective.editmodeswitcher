@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <action-provider name="portal_workflow"/>
+ <action-provider name="portal_types"/>
+ <action-provider name="portal_actions"/>
+ <object name="user" meta_type="CMF Action Category">
+  <object name="show_editmode" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Show Edit Mode</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/@@setEditMode</property>
+   <property name="link_target"></property>
+   <property
+      name="icon_expr">string:${globals_view/navigationRootUrl}/editmode_icon.png</property>
+   <property name="available_expr">not: portal/isEditMode</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="hide_editmode" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Hide Edit Mode</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/@@setViewMode</property>
+   <property name="link_target"></property>
+   <property
+      name="icon_expr">string:${globals_view/navigationRootUrl}/viewmode_icon.png</property>
+   <property name="available_expr">portal/isEditMode</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+</object>

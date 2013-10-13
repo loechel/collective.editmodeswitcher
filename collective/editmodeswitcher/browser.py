@@ -22,3 +22,43 @@ class EditModeSwitcher(BrowserView):
                 expires=build_http_date(time.time() + COOKIE_LIFETIME))
 
         self.request.response.redirect(context.absolute_url(), status=302)
+
+
+class isEditMode(BrowserView):
+    """A browser view for setting/deleting a cookie which disables edit mode
+       (aka borders).
+    """
+
+    def __call__(self):
+        """.
+        """
+        #import ipdb; ipdb.set_trace()
+        return self.request.get(COOKIE_NAME, '') == ''
+
+
+class setViewMode(BrowserView):
+    """A browser view for setting a cookie which enables edit mode
+       (aka borders).
+    """
+
+    def __call__(self):
+        """
+        """
+        context = aq_inner(self.context)
+        self.request.response.setCookie(COOKIE_NAME, '1', path='/',
+                expires=build_http_date(time.time() + COOKIE_LIFETIME))
+
+        self.request.response.redirect(context.absolute_url(), status=302)
+
+class setEditMode(BrowserView):
+    """A browser view for deleting a cookie which disables edit mode
+       (aka borders).
+    """
+
+    def __call__(self):
+        """
+        """
+        context = aq_inner(self.context)
+        self.request.response.expireCookie(COOKIE_NAME, path='/')
+
+        self.request.response.redirect(context.absolute_url(), status=302)
